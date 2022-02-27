@@ -7,7 +7,7 @@ $(document).ready(function() {
             contentType: false,
             cache: false,
             processData:false,
-            data:$('#careers_form').serialize(),
+            data: new FormData(this),
             success: function (data) {
                 console.log(data);
             }
