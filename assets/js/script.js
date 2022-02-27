@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $(document).on('submit','#careers_form',function(e){
-    e.preventDefault();
+    alert('hello');
+        e.preventDefault();
     $('career_submit_button').prop('disabled', true);
         $.ajax({
             url: "jobs.php",
