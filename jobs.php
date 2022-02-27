@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Allow certain file formats
         $allowTypes = array('pdf', 'doc', 'docx', 'jpg', 'png', 'jpeg');
+
         if(in_array($fileType, $allowTypes)){
             // Upload file to the server
             if(move_uploaded_file($_FILES["resume"]["tmp_name"], $targetFilePath)){
