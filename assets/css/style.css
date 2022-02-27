@@ -306,7 +306,9 @@ padding-bottom:100px;
 	z-index:999;
     width: 100px;
 }
-
+.service-text{
+    font-size:24px;
+}
 .for-box .clr1
 {
 background:#3ec441;
@@ -315,7 +317,6 @@ padding: 50px 0 50px;
 text-align:center;
 overflow:hidden;
 position:relative;
-font-size: 24px;
 }
 .for-box .clr1::before
 {
@@ -366,7 +367,7 @@ padding: 50px 0 50px;
 text-align:center;
 overflow:hidden;
 position:relative;
-    font-size: 24px;
+
 }
 .for-box .clr2::before
 {
@@ -410,7 +411,7 @@ text-align:center;
 padding: 50px 0 50px;
 overflow:hidden;
 position:relative;
-    font-size: 24px;
+
 }
 .for-box .clr3::before
 {
@@ -454,7 +455,6 @@ padding: 50px 0 50px;
 text-align:center;
 overflow:hidden;
 position:relative;
-    font-size: 24px;
 }
 .for-box .clr4::before
 {
