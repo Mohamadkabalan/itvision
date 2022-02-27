@@ -9,6 +9,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $uploadStatus = 1;
 
+    echo empty($_FILES["resume"]["name"]);
+    echo '<br>';
+
     // Upload attachment file
     if(!empty($_FILES["resume"]["name"])){
       echo "not empty";
