@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers = "From: $fromName"." <".$from.">";
 
         if (!empty($uploadedFile) && file_exists($uploadedFile)) {
-
+              echo "hello1";
             // Boundary
             $semi_rand = md5(time());
             $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
@@ -86,6 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Delete attachment file from the server
             @unlink($uploadedFile);
         } else {
+            echo "hello2";
             // Set content-type header for sending HTML email
             $headers .= "\r\n"."MIME-Version: 1.0";
             $headers .= "\r\n"."Content-type:text/html;charset=UTF-8";
