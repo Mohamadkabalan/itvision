@@ -9,12 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $uploadStatus = 1;
 
-    echo !empty($_FILES["resume"]["name"]);
-    echo '<br>';
+
 
     // Upload attachment file
     if(!empty($_FILES["resume"]["name"])){
-      echo "not empty";
         // File path config
         $targetDir = "uploads/";
         $fileName = basename($_FILES["resume"]["name"]);
@@ -60,7 +58,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers = "From: $fromName"." <".$from.">";
 
         if (!empty($uploadedFile) && file_exists($uploadedFile)) {
-              echo "hello1";
             // Boundary
             $semi_rand = md5(time());
             $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
@@ -90,7 +87,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Delete attachment file from the server
             @unlink($uploadedFile);
         } else {
-            echo "hello2";
             // Set content-type header for sending HTML email
             $headers .= "\r\n"."MIME-Version: 1.0";
             $headers .= "\r\n"."Content-type:text/html;charset=UTF-8";
@@ -104,13 +100,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $statusMsg = 'Your contact request has been submitted successfully !';
             $msgClass = 'succdiv';
-            return json_encode(array('status'=>'200','msg'=>$statusMsg));
+              echo json_encode(array('status'=>'200','msg'=>$statusMsg));
 
         } else {
             $statusMsg = 'Your contact request submission failed, please try again.';
-            return json_encode(array('status'=>'500','msg'=>$statusMsg));
+            echo json_encode(array('status'=>'500','msg'=>$statusMsg));
         }
     }
-    return json_encode(array('status'=>'500','msg'=>'upload not successful'));
+    echo json_encode(array('status'=>'500','msg'=>'upload not successful'));
 }
 ?>
