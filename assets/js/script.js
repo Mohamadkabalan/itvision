@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(document).on('submit','#careers_form',function(e){
-    alert('hello');
+
         e.preventDefault();
     $('#career_submit_button').prop('disabled', true);
         $.ajax({
@@ -14,7 +14,7 @@ $(document).ready(function() {
             success: function (data) {
                 if(data.status=='200'){
                     $('#careers_form')[0].reset();
-                    alert('sent successfully');
+                    alert('Resume Sent Successfully');
                 }
             }
         });
