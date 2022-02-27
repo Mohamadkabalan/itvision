@@ -9,6 +9,7 @@ $(document).ready(function() {
             cache: false,
             processData:false,
             data: new FormData(this),
+            dataType: "json",
             success: function (data) {
                 if(data.status=='200'){
                     $('#careers_form')[0].reset();
