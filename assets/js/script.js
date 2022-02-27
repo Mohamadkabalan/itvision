@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $(document).on('submit','#careers_form',function(e){
     e.preventDefault();
+    $('career_submit_button').prop('disabled', true);
         $.ajax({
             url: "jobs.php",
             method: "POST",
@@ -9,7 +10,10 @@ $(document).ready(function() {
             processData:false,
             data: new FormData(this),
             success: function (data) {
-                console.log(data);
+                if(data.status=='200'){
+                    $('#careers_form')[0].reset();
+                    alert('sent successfully');
+                }
             }
         });
     });
