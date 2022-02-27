@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $fromName = $name;
 
         // Subject
-        $emailSubject = 'Job form is Submitted by '.$name.' as'.$position;
+        $emailSubject = 'Job form is Submitted by '.$name.' as '.$position;
 
         // Message
         $htmlContent = '<h2>Contact Request Submitted</h2>
