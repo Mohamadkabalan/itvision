@@ -136,56 +136,6 @@
             </div>
         </div>
     </section>
-    <section class="about-map ms page_map" data-draggable="false" data-scrollwheel="false">
-
-        <div class="marker">
-            <div class="marker-address">Lebanon, North, Koura, Rasmaska</div>
-            <div class="marker-description">
-
-                <ul class="list-unstyled">
-                    <li>
-								<span class="icon-inline">
-									<span class="icon-styled color-main">
-										<i class="fa fa-map-marker"></i>
-									</span>
-
-									<span>
-										Lebanon, North, Koura, Rasmaska
-									</span>
-								</span>
-                    </li>
-
-                    <li>
-								<span class="icon-inline">
-									<span class="icon-styled color-main">
-										<i class="fa fa-phone"></i>
-									</span>
-
-									<span>
-										+961-76053730
-									</span>
-								</span>
-                    </li>
-                    <li>
-								<span class="icon-inline">
-									<span class="icon-styled color-main">
-										<i class="fa fa-envelope"></i>
-									</span>
-
-									<span>
-										Info@itvision.me
-									</span>
-								</span>
-                    </li>
-                </ul>
-            </div>
-
-            <img class="marker-icon" src="images/map_marker_icon.png" alt="">
-        </div>
-        <!-- .marker -->
-
-    </section>
-
 @endsection
 
 @push('scripts')
